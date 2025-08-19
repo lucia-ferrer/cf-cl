@@ -1,0 +1,44 @@
+# configs/default.yaml
+seed: 0
+device: "cuda"  # or "cpu"
+output_dir: "outputs/week1_smoke"
+
+data:
+  track: "vision"  # "synthetic" or "vision"
+  batch_size: 128
+  num_workers: 2
+  # For synthetic
+  synth:
+    n_per_task: 4000
+    latent_dim: 2
+    drift_bin: "medium"  # low|medium|high
+  # For vision
+  vision:
+    dataset: "mnist_to_mnistm"
+    train_subset: 8000
+    val_subset: 2000
+
+model:
+  latent_dim: 16
+  beta: 1.0
+  shared_decoder: true
+  enc_channels: [16, 32]
+  hidden_dim: 128
+
+train:
+  epochs_per_task: 3
+  lr: 1e-3
+  weight_decay: 0.0
+  early_stop_patience: 3
+
+alignment:
+  use_mmd: true
+  mmd_weight: 1.0
+  use_hsic: true
+  hsic_weight: 0.5
+
+clustering:
+  k: 10
+  threshold_ari: 0.75
+  threshold_nmi: 0.80
+  max_kmeans_iter: 100

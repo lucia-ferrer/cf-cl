@@ -1,0 +1,16 @@
+[project]
+name = "cf-cl"
+version = "0.1.0"
+description = "Contiual LEarning on Generative Models who build p(x) such as VAEs"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "avalanche-lib==0.6.0",
+    "torch>=2.7.1",
+]
+
+[project.optional-dependencies]
+code-quality = [
+    "black>=25.1.0",
+    "isort>=6.0.1",
+]
