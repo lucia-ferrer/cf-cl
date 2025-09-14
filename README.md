@@ -1,2 +1,2 @@
 # cf-cl
-Research on Catastrophic Forgetting on Continual Learning
+Research on Catastrophic Forgetting on Continual Learning for VAEs

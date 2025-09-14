@@ -1,22 +1,14 @@
 # configs/default.yaml
 seed: 0
-device: "cuda"  # or "cpu"
+device: "cpu"  # or "cpu"
 output_dir: "outputs/week1_smoke"
 
 data:
-  track: "vision"  # "synthetic" or "vision"
+  track: "vision"  # "synthetic" or "vision" or "cic"
   batch_size: 128
   num_workers: 2
-  # For synthetic
-  synth:
-    n_per_task: 4000
-    latent_dim: 2
-    drift_bin: "medium"  # low|medium|high
-  # For vision
-  vision:
-    dataset: "mnist_to_mnistm"
-    train_subset: 8000
-    val_subset: 2000
+
+
 
 model:
   latent_dim: 16

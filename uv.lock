@@ -120,19 +120,27 @@ code-quality = [
     { name = "black" },
     { name = "isort" },
 ]
-ds-task-aware = [
-    { name = "avalanche-lib" },
+
+[package.dev-dependencies]
+lint = [
+    { name = "black" },
+    { name = "isort" },
 ]
 
 [package.metadata]
 requires-dist = [
     { name = "avalanche-lib", specifier = "==0.6.0" },
-    { name = "avalanche-lib", marker = "extra == 'ds-task-aware'", specifier = ">=0.6.0" },
     { name = "black", marker = "extra == 'code-quality'", specifier = ">=25.1.0" },
     { name = "isort", marker = "extra == 'code-quality'", specifier = ">=6.0.1" },
     { name = "torch", specifier = ">=2.7.1" },
 ]
-provides-extras = ["ds-task-aware", "code-quality"]
+provides-extras = ["code-quality"]
+
+[package.metadata.requires-dev]
+lint = [
+    { name = "black", specifier = ">=25.1.0" },
+    { name = "isort", specifier = ">=6.0.1" },
+]
 
 [[package]]
 name = "cffi"
