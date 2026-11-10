@@ -6,7 +6,7 @@ from avalanche.training.plugins import EvaluationPlugin
 import torch
 from torch.utils.data import DataLoader
 
-from vae_ls_align.models.vae import vae_loss
+from cf_cl.models.vae import vae_loss
 
 # ---------------------
 # Dataloader special

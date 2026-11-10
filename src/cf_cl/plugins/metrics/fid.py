@@ -6,7 +6,7 @@ from avalanche.evaluation.metric_utils import get_metric_name
 import torch
 
 
-from vae_ls_align.utils import convert_float_to_uint8
+from cf_cl.utils import convert_float_to_uint8
 
 
 class FIDStandaloneMetric(Metric[float]):
